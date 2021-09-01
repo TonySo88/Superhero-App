@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-const HeroIndividualCard = ({ character }) => {
-    return(
+const HeroIndividualCard = ({ individual }) => {
+    return (
         <div>
-            <h2>Character: {character.name}</h2>
-            <h3>Full name: {character.biography.fullName}</h3>
-            <h3>Alignment: {character.biography.alignment}</h3>
+             <h2>Character: {individual.name}</h2>
+             <h3>{individual.powerstats.intelligence}</h3>
+             <h3>{individual.powerstats.strength}</h3>
+             <h3>{individual.powerstats.speed}</h3>
+             <h3>{individual.powerstats.durability}</h3>
+             <h3>{individual.powerstats.power}</h3>
+             <h3>{individual.powerstats.combat}</h3>
         </div>
     )
 }

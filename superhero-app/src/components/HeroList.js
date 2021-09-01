@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 import HeroListCard from './HeroListCard'
+import axios from 'axios'
 
-const HeroList = ({ characters }) => {
+const HeroList = () => {
+    const [characters, setCharacters] = useState("")
+    useEffect(() => {
+      axios
+          .get("https://akabab.github.io/superhero-api/api/all.json")
+          .then(res => {
+              console.log("first call", res.data)
+              setCharacters(res.data)
+          })
+          .catch(err => console.log(err))
+      }, [])
 
     return (
         <div>
-            <h2>A list of all superheroes and villains</h2>
+            <h2>Component: Hero List</h2>
             {characters.length > 0 && characters.map(character => (
-            // cannot map over empty array, so characters.length > 0 checks to see if there are values in characters list
-                <HeroListCard key={character.id} character={character}/>
+                <HeroListCard key={character.id} character={character} />
             ))}
         </div>
     )
