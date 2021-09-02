@@ -15,8 +15,8 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/hero-individual">
-          <HeroIndividual/ >
+        <Route path="/hero-individual/:id">
+          <HeroIndividual/>
         </Route>
         <Route path="/hero-list">
           <HeroList />

@@ -11,7 +11,7 @@ const HeroListCard = ({ character }) => {
                 <h3>Alignment: {character.biography.alignment}</h3>
                 <h3>Publisher: {character.biography.publisher}</h3>
                 <h3>
-                    <Link to="/hero-individual">More Info</Link>
+                    <Link to={`/hero-individual/${character.id}`}>More Info</Link>
                 </h3>
             </div>
         </div>
