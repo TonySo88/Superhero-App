@@ -1,6 +1,8 @@
 import React from "react";
 
 const HeroIndividualCard = ({ individual }) => {
+  // FIGURE OUT AVERAGE TO GET TOTAL POWER STAT FIGURE
+  // POWER STAT IS A KEY VALUE PAIR WITH THE VALUE BEING A NUMBER
   function getAvg(stats) {
     let total = 0;
     for (let i = 0; i < stats.length; i++) {
@@ -24,7 +26,8 @@ const HeroIndividualCard = ({ individual }) => {
         <h3>Intelligence: {individual.powerstats.speed}</h3>
         <h3>Power: {individual.powerstats.durability}</h3>
         <h3>Speed: {individual.powerstats.power}</h3>
-        <h3>Stength: {individual.powerstats.combat}</h3>
+        <h3>Strength: {individual.powerstats.combat}</h3>
+        <h3>Average: {getAvg(individual.powerstats)}</h3>
       </div>
     </div>
   );
