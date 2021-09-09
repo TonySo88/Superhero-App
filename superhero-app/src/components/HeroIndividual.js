@@ -21,7 +21,7 @@ const HeroIndividual = () => {
     return (
         <div>
             {console.log("here", individual, individual.length)}
-            <h2>Some more info on:</h2>
+            {/* <h2>Some more info on:</h2> */}
             {/* named the iterated item 'item' and not 'individual' to avoid reusing variable */}
             {individual.length > 0 && individual.map(item => (
             // cannot map over empty array, so characters.length > 0 checks to see if there are values in characters list

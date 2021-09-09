@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #cccccc;
 }
 
 .warmachine {
@@ -13,13 +14,14 @@ body {
   margin-right: 300px;
 }
 
+/* HeroListCard.js */
 .hero-list {
   display: flex;
   justify-content: flex-start;
   padding: 10px;
 }
 
-.character-img{
+.character-img {
   border-radius: 5%
 }
 
@@ -27,7 +29,18 @@ body {
   padding-left: 20px;
 }
 
+/* HeroIndividualCard.js */
+
 .individual-card {
   display: flex;
   justify-content: flex-start;
+  padding: 10px;
+}
+
+.individual-img {
+  border-radius: 5%
+}
+
+.individual-info {
+  padding-left: 20px;
 }

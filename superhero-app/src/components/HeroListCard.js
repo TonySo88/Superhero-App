@@ -8,10 +8,11 @@ const HeroListCard = ({ character }) => {
             <div className="character-info">
                 <h2>Character: {character.name}</h2>
                 <h3>Full name: {character.biography.fullName}</h3>
+                <h3>Race: {character.appearance.race}</h3>
                 <h3>Alignment: {character.biography.alignment}</h3>
                 <h3>Publisher: {character.biography.publisher}</h3>
                 <h3>
-                    <Link to={`/hero-individual/${character.id}`}>More Info</Link>
+                    <Link to={`/hero-individual/${character.id}`}>Click for Power Stats!</Link>
                 </h3>
             </div>
         </div>
