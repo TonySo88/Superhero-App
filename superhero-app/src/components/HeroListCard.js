@@ -19,4 +19,4 @@ const HeroListCard = ({ character }) => {
     )
 }
 
-export default HeroListCard
+export default HeroListCard;

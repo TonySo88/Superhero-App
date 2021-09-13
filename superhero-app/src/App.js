@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
-import axios from 'axios'
 
 import './App.css';
 import Home from './components/Home';
 import HeroList from './components/HeroList'
 import HeroIndividual from './components/HeroIndividual'
+import MarvelList from './components/marvel/MarvelList'
 
 function App() {
 
@@ -20,6 +20,9 @@ function App() {
         </Route>
         <Route path="/hero-list">
           <HeroList />
+        </Route>
+        <Route path="/marvel-list">
+          <MarvelList />
         </Route>
       </div>
     </Router>

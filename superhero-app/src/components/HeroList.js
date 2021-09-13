@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import HeroListCard from './HeroListCard'
 import axios from 'axios'
+
+import HeroListCard from './HeroListCard'
 
 const HeroList = () => {
     const [characters, setCharacters] = useState("")

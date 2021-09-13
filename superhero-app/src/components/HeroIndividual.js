@@ -7,6 +7,7 @@ import HeroIndividualCard from './HeroIndividualCard'
 const HeroIndividual = () => {
     const { id } = useParams();
     const [individual, setIndividual] = useState([])
+    
     useEffect(() => {
         console.log("id", id)
       axios
