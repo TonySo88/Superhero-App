@@ -9,27 +9,21 @@ const MarvelList = () => {
         axios
             .get("https://akabab.github.io/superhero-api/api/all.json")
             .then(res => {
-                res.data.filter(character => {
-                    character.biography.publisher === "Marvel Comics"
-                    return character
-                })
-
-                return setMarvelChars
+                console.log("marvel call", res.data)
+                setMarvelChars(res.data)
             })
             .catch(err => console.log(err))
     }, [])
-
-    // function marvelFilter(marvelChars) {
-    //     if (marvelChars === res.data.biography.publisher === "Marvel Comics")
-    //     return marvelChars
-    // }
     
     return (
         <div>
-            <h2>Component: Marvel</h2>
-            {marvelChars.length > 0 && marvelChars.map(character => (
-                <MarvelCard key={character.id} character={character}/>
-            ))}
+        <h2>Component: Marvel</h2>
+        {marvelChars.length > 0 && marvelChars.filter(character => {
+            if (character.biography.publisher === "Marvel Comics")
+                return character
+        }).map(character => (
+            <MarvelCard key={character.id} character={character}/>
+        ))}
         </div>
     )
 }
